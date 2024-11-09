@@ -1,2 +1,26 @@
 # ArticleHub
-Managerment System for News Article 
+
+## 1.紹介
+
+- Managerment System for News Article 
+- ニュース、ブログなどの文章を管理するためのシステム
+
+## 2.機能
+
+- 認証コードに基づくログイン
+-　権限の判断
+- 文章内容リストのチェック（フイルター、ページネーション）
+- 文章の編集
+- 文章の削除
+- 文章のアプロード（テクスト、写真など）
+
+## 3.技術
+- Boostrapに基づく、ＨＴＭＬペイジのタグとスタイルを作成する
+- wangEditorプラグインを統合して、エデータを実装する
+- 純粋なJavaScriptを使用して、CRUD業務を完了する
+- Axiosを使用して、REST APIとやり取りする
+- tokenを使って、権限の判断を行う
+
+
+
+
