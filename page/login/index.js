@@ -12,6 +12,16 @@ function alert (msg,success){
         myAlert.classList.remove('show')
         myAlert.classList.remove(success? 'alert-success':'alert-danger')    
     },1000)
+    // const myAlert = document.querySelector('.alert')
+    // myAlert.classList.add(isSuccess ? 'alert-success' : 'alert-danger')
+    // myAlert.innerHTML = msg
+    // myAlert.classList.add('show')
+
+    // setTimeout(() => {
+    //   myAlert.classList.remove(isSuccess ? 'alert-success' : 'alert-danger')
+    //   myAlert.innerHTML = ''
+    //   myAlert.classList.remove('show')
+    // }, 2000)
 }
 
 loginBtn.addEventListener('click',()=>{
@@ -27,9 +37,14 @@ loginBtn.addEventListener('click',()=>{
 }).then(result => {
     console.log(result)
     alert('Login Success!',1)
+    localStorage.setItem('token',result.data.data.token)
+    setTimeout(()=>{
+      location.href= "../content/index.html"
+    },1500)
+    
 }).catch(error=>{
     
-    console.log(error.response.data.message)
+    console.log(error)
     alert('Login Failed!',0)
 }) 
 })
