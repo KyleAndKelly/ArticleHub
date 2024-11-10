@@ -7,7 +7,7 @@ html, body{
   display: flex;
 }
 
-/* 提示框 */
+
 .alert{
   width: 400px;
   position: fixed;
@@ -21,7 +21,7 @@ html, body{
   display: block;
 }
 
-/* 侧边栏 */
+
 .aside {
   width: 200px;
   background-color: #023;
@@ -32,7 +32,7 @@ html, body{
   color: #fc6627;
 }
 
-/* 侧边栏导航 */
+
 .nav{
   padding-left: 20px;
 }
@@ -52,7 +52,7 @@ html, body{
   color: #409eff !important;
 }
 
-/* 右侧区域 */
+
 .main{
   flex: 1;
 }
@@ -71,7 +71,7 @@ html, body{
   margin-left: 20px;
 }
 
-/* 卡片容器布局 */
+
 .content{
   padding: 30px;
 }
@@ -87,7 +87,7 @@ html, body{
   border-bottom: 1px solid #ebeef5;
 }
 
-/* 表单 */
+
 .body form>div{
   margin-top: 20px;
 }
@@ -96,7 +96,7 @@ html, body{
   display: inline-block;
 }
 
-/* 封面 */
+
 .cover .place{
   width: 200px;
   height: 200px;
@@ -123,10 +123,10 @@ html, body{
   display: none;
 }
 
-/* 富文本编辑器 */
+
 #editor—wrapper {
   border: 1px solid #ccc;
-  z-index: 100; /* 按需定义 */
+  z-index: 100; 
 }
 #toolbar-container { border-bottom: 1px solid #ccc; }
 #editor-container { height: 500px; }
