@@ -10,9 +10,9 @@ axios({
   const nickName = document.querySelector(".nick-name")
   if(nickName) {
     console.log("now in modification") 
-    userName = result.data.data.mobile
+    userName = result.data.mobile
     nickName.innerHTML  = userName
   }
-  console.log(result.data.data.mobile) 
+  console.log(result.data.mobile) 
 }
 )

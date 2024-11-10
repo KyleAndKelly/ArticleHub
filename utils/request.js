@@ -10,8 +10,9 @@ axios.interceptors.request.use(function(config){
     return Promise.reject(error)
   })
 
-  axios.interceptors.response.use(function(responce){
-    return responce
+  axios.interceptors.response.use(function(response){
+    result = response.data
+    return result
   },function(error){
     if(error?.response?.status == 401){
         alert("Login expired,Please login again!")

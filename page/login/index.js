@@ -13,7 +13,7 @@ loginBtn.addEventListener('click',()=>{
 }).then(result => {
     console.log(result)
     myalert('Login Success!',1)
-    localStorage.setItem('token',result.data.data.token)
+    localStorage.setItem('token',result.data.token)
     setTimeout(()=>{
       location.href= "../content/index.html"
     },1500)
