@@ -36,3 +36,34 @@ async function setChannals(){
     document.querySelector('.form-select').innerHTML = htmlStr
 }
 setChannals()
+
+document.querySelector(".img-file").addEventListener("change", async e =>{
+    console.log(e)
+    image_file = e.target.files[0]
+    console.log(image_file)
+    f = new FormData()
+    f.append("image",image_file)
+    try {
+        const res = await axios({
+            url: '/v1_0/upload',
+            method:'POST',
+            data:f
+        })
+        myalert("upload success!",1)    
+        console.log(res)
+        console.log(res.data.url)
+        document.querySelector(".rounded").src = res.data.url
+        document.querySelector(".rounded").classList.add("show")
+        document.querySelector(".place").classList.add("hide")
+    
+    } catch (error) {
+        console.log(error)
+        myalert("upload success!",1)   
+    }
+
+    
+
+
+    
+    
+})
