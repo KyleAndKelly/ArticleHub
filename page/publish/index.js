@@ -61,9 +61,33 @@ document.querySelector(".img-file").addEventListener("change", async e =>{
         myalert("upload success!",1)   
     }
 
-    
-
-
-    
-    
+})
+document.querySelector(".send").addEventListener("click",async e=>{
+    const form = document.querySelector(".art-form")
+    const data = serialize(form,{hash: true, empty: true}) 
+    data.cover = {
+        type:1,
+        img:[document.querySelector(".rounded").src]
+    }
+    console.log(data)  
+    try {
+        const res = await axios({
+            url: '/v1_0/mp/articles',
+            method:'POST',
+            data
+        })
+        myalert("publish success!",1)   
+        form.reset()
+        document.querySelector(".rounded").src = ''
+        document.querySelector(".rounded").classList.remove("show") 
+        document.querySelector(".place").classList.remove("hide") 
+        editor.innerHTML = ''
+        setTimeout(()=>{
+            location.href="../content/index.html"
+        },1500)
+    } catch (error) {
+        console.log(error)
+        myalert("publish failed!",1)   
+    }
+        
 })
