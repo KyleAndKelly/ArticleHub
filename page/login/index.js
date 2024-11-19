@@ -1,3 +1,4 @@
+import './index.css';
 loginBtn = document.querySelector(".btn")
 loginBtn.addEventListener('click',()=>{
   console.log("Log: login clicked!")
