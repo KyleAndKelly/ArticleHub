@@ -12,3 +12,5 @@ function myalert (msg,success){
       myAlert.classList.remove(success? 'alert-success':'alert-danger')    
   },1000)
 }
+
+export default myalert;

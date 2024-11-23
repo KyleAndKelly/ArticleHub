@@ -1,4 +1,9 @@
 
+import serialize from '@/lib/form-serialize.js'; 
+import axios from '@/utils/request.js'; 
+import myalert from '@/utils/alert.js'; 
+import './index.css'; 
+
 const { createEditor, createToolbar } = window.wangEditor
 
 const editorConfig = {
@@ -27,11 +32,11 @@ const toolbar = createToolbar({
 })
 
 async function setChannals(){
-    result = await axios({
+    let result = await axios({
         url:'/v1_0/channels'
     })
 
-    htmlStr = `<option value="" selected>请选择文章频道</option>`+result.data.channels.map(item=>`<option value=${item.id}>${item.name}</option>`).join('')
+    let htmlStr = `<option value="" selected>请选择文章频道</option>`+result.data.channels.map(item=>`<option value=${item.id}>${item.name}</option>`).join('')
     console.log(htmlStr)
     document.querySelector('.form-select').innerHTML = htmlStr
 }

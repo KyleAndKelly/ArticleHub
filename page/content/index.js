@@ -1,3 +1,8 @@
+
+import '@/utils/auth.js'
+import axios from '@/utils/request.js'; 
+
+import './index.css'; 
 async function getArticleList(status="",channel_id="",page = "1",per_page="4"){
 
     try {
@@ -12,7 +17,7 @@ async function getArticleList(status="",channel_id="",page = "1",per_page="4"){
                 
             }
         })
-        alert("request success!",1)    
+        // alert("request success!",1)    
         console.log(res.data.results)
         const artList = document.querySelector(".art-list")
         console.log("artList == null"+(artList == null))
@@ -50,7 +55,7 @@ async function getArticleList(status="",channel_id="",page = "1",per_page="4"){
 
     } catch (error) {
         console.log(error)
-        alert("request failed!",1)   
+        console.log("request failed!",1)   
     }
 }
 getArticleList()

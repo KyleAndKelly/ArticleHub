@@ -1,5 +1,14 @@
-import './index.css';
-loginBtn = document.querySelector(".btn")
+
+import serialize from '@/lib/form-serialize.js'; 
+import axios from '@/utils/request.js'; 
+import myalert from '@/utils/alert.js'; 
+import './index.css'; 
+
+if(process.env.NODE_ENV == 'production'){
+  console.log = function(){}
+}
+
+let loginBtn = document.querySelector(".btn")
 loginBtn.addEventListener('click',()=>{
   console.log("Log: login clicked!")
 //   location.href= "../content/index.html"
@@ -25,3 +34,4 @@ loginBtn.addEventListener('click',()=>{
     myalert('Login Failed!',0)
 }) 
 })
+

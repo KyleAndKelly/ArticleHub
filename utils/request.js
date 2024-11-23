@@ -1,3 +1,4 @@
+
 axios.defaults.baseURL ="https://geek.itheima.net/"
 
 axios.interceptors.request.use(function(config){
@@ -11,7 +12,7 @@ axios.interceptors.request.use(function(config){
   })
 
   axios.interceptors.response.use(function(response){
-    result = response.data
+    let result = response.data
     return result
   },function(error){
     if(error?.response?.status == 401){
@@ -22,4 +23,4 @@ axios.interceptors.request.use(function(config){
     return Promise.reject(error)
   })
   
-  
+  export default axios;

@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.0",
     "html-webpack-plugin": "^5.6.3",
@@ -10,8 +11,8 @@
     "webpack-dev-server": "^5.1.0"
   },
   "scripts": {
-    "build": "webpack --mode=production",
-    "dev": "webpack serve --mode=development"
+    "build": "cross-env NODE_ENV=production webpack --mode=production",
+    "dev": "cross-env NODE_ENV=development webpack serve --mode=development"
   },
   "dependencies": {
     "axios": "^1.7.7"
