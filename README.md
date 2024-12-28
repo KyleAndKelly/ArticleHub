@@ -7,7 +7,7 @@
 
 ## <a name="introduction">&sect; 紹介</a>
 
-- Managerment System for News Article 
+- Managerment System for blog Article (using Bootstrap/Axios)
 - ニュース、ブログなどの文章を管理するためのシステム
 
 
